@@ -43,4 +43,5 @@
 - 补全或确认 JS 脚本以恢复完整交互功能。
 
 ---
-来源文件：`饥荒单机版Wiki · 生存指南.html`
+来源文件：`index.html`
+[webpage](index.html)
