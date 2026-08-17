@@ -13,7 +13,7 @@
   - page-characters（角色介绍，默认激活）
   - page-items（道具系统：工具 / 武器 / 护甲）
   - page-creatures（生物图鉴：被动 / 中立 / 敌对 / BOSS）
-  - ��它标签占位（生存、天气、地下、配方、FAQ、版本、关于）
+  - 它标签占位（生存、天气、地下、配方、FAQ、版本、关于）
 - 卡片组件
   - 每个条目为可展开卡片：头像（data URI）、摘要、标签（tag）、详情区（stat-table）
 - 页脚（Footer）
