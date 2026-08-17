@@ -1,0 +1,154 @@
+[
+  {
+    "id": 1,
+    "display_name": null,
+    "description": "一位彬彬有礼的绅士科学家。拥有标志性的浓密胡须可抵御寒冷，无特殊缺点。",
+    "tags": ["新手推荐"],
+    "stats": {"hp": 150, "sanity": 200, "hunger": 150},
+    "portrait": null
+  },
+  {
+    "id": 2,
+    "display_name": null,
+    "description": "一位痴迷火焰的女孩。自带打火机，对火免疫，在火源附近可恢复理智值。",
+    "tags": ["注意防火"],
+    "stats": {"hp": 150, "sanity": 120, "hunger": 150},
+    "portrait": null
+  },
+  {
+    "id": 3,
+    "display_name": null,
+    "description": "一位强壮的男子。饥饿值影响体型和攻击力，饱食时攻击翻倍。",
+    "tags": ["战力最强","大胃王"],
+    "stats": {"hp": "150-300", "sanity": 200, "hunger": 300},
+    "portrait": null
+  },
+  {
+    "id": 4,
+    "display_name": null,
+    "description": "思念亡姐的忧郁少女。可召唤幽灵姐姐Abigail协助战斗。",
+    "tags": ["召唤系"],
+    "stats": {"hp": 150, "sanity": 200, "hunger": 150},
+    "portrait": null
+  },
+  {
+    "id": 5,
+    "display_name": null,
+    "description": "一台没有感情的机器人。吃齿轮升级属性，雷击获得过载强化。",
+    "tags": ["成长型","怕雨"],
+    "stats": {"hp": "100-400", "sanity": "100-300", "hunger": "100-200"},
+    "portrait": null
+  },
+  {
+    "id": 6,
+    "display_name": null,
+    "description": "博学的图书馆管理员。自带科技等级，可制作多种魔法书籍。",
+    "tags": ["魔法系","不能睡觉"],
+    "stats": {"hp": 150, "sanity": 250, "hunger": 150},
+    "portrait": null
+  },
+  {
+    "id": 7,
+    "display_name": null,
+    "description": "加拿大伐木工，拥有一把会说话的斧头Lucy。砍树过多可变身海狸。",
+    "tags": ["变身系","伐木专家"],
+    "stats": {"hp": 150, "sanity": 200, "hunger": 150},
+    "portrait": null
+  },
+  {
+    "id": 8,
+    "display_name": null,
+    "description": "沉默的默剧演员。不能说话，属性全面削弱。",
+    "tags": ["高难度","纯挑战"],
+    "stats": {"hp": 113, "sanity": 150, "hunger": 113},
+    "portrait": null
+  },
+  {
+    "id": 9,
+    "display_name": null,
+    "description": "女武神演员。只吃肉食，攻击吸血，自带战斗长矛和头盔。",
+    "tags": ["战斗专家"],
+    "stats": {"hp": 200, "sanity": 120, "hunger": 120},
+    "portrait": null
+  },
+  {
+    "id": 10,
+    "display_name": null,
+    "description": "蜘蛛体内的小男孩。与蜘蛛友好，吃怪物肉不受惩罚。",
+    "tags": ["蜘蛛之友"],
+    "stats": {"hp": 175, "sanity": 100, "hunger": 175},
+    "portrait": null
+  },
+  {
+    "id": 11,
+    "display_name": null,
+    "description": "冲浪女孩，自带冲浪板，冲浪时可恢复理智。",
+    "tags": ["海洋系"],
+    "stats": {"hp": 120, "sanity": 200, "hunger": 200},
+    "portrait": null
+  },
+  {
+    "id": 12,
+    "display_name": null,
+    "description": "前暗影之王，仪表堂堂的魔术师。自带暗影装备，理智值高速自动恢复。",
+    "tags": ["暗影系","高难度"],
+    "stats": {"hp": 75, "sanity": 200, "hunger": 150},
+    "portrait": null
+  },
+  {
+    "id": 13,
+    "display_name": null,
+    "description": "美食家厨师，自带便携烹饪锅，可制作多种特殊料理。",
+    "tags": ["烹饪专家","挑食"],
+    "stats": {"hp": 150, "sanity": 200, "hunger": 250},
+    "portrait": null
+  },
+  {
+    "id": 14,
+    "display_name": null,
+    "description": "猿猴之王，跑动后可四肢着地加速奔跑。投掷粪便造成可观伤害，与猴子部落友好。",
+    "tags": ["敏捷型"],
+    "stats": {"hp": 125, "sanity": 150, "hunger": 175},
+    "portrait": null
+  },
+  {
+    "id": 15,
+    "display_name": null,
+    "description": "独腿海盗船长，自带幸运帽和海盗船。可挖掘藏宝地点找到丰厚财宝。",
+    "tags": ["寻宝型"],
+    "stats": {"hp": 150, "sanity": 120, "hunger": 150},
+    "portrait": null
+  },
+  {
+    "id": 16,
+    "display_name": null,
+    "description": "勇敢的飞行员，自带气喇叭枪和导航仪，拥有闪避冲刺能力，移动速度快。",
+    "tags": ["远程攻击"],
+    "stats": {"hp": 100, "sanity": 150, "hunger": 150},
+    "portrait": null
+  },
+  {
+    "id": 17,
+    "display_name": null,
+    "description": "发明家科学家，自带护目镜可侦测物体，能制作各种奇妙装置。",
+    "tags": ["科技型","近视"],
+    "stats": {"hp": 150, "sanity": 200, "hunger": 150},
+    "portrait": null
+  },
+  {
+    "id": 18,
+    "display_name": null,
+    "description": "猪人公主，可在猪人商店用金块交易，拥有独特王冠。害怕黑暗和怪物肉。",
+    "tags": ["富家千金"],
+    "stats": {"hp": 150, "sanity": 100, "hunger": 200},
+    "portrait": null
+  },
+  {
+    "id": 19,
+    "display_name": null,
+    "description": "植物生物，可直接种植种子，花开状态提升移动速度。",
+    "tags": ["植物系","独特治疗"],
+    "stats": {"hp": 150, "sanity": 200, "hunger": 150},
+    "portrait": null
+  }
+]
