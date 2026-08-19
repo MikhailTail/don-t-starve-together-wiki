@@ -39,7 +39,6 @@
 
 /* ========== 基础 ========== */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
 body {
     font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", -apple-system, sans-serif;
     background: var(--bg-primary); color: var(--text-primary);
@@ -140,9 +139,9 @@ body {
 
 /* ========== 主体 ========== */
 .main-container { max-width: 1300px; margin: 0 auto; padding: 24px 20px; }
-.page-section { display: none; animation: fadeIn 0.3s ease; }
+.page-section { display: none; animation: fadeIn 0.12s ease; }
 .page-section.active { display: block; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 .section-title { font-size: 1.8em; color: var(--text-heading); margin-bottom: 20px; padding-bottom: 10px; border-bottom: 3px solid var(--accent); display: inline-block; }
 .section-subtitle { font-size: 1.3em; color: var(--text-heading); margin: 24px 0 12px; display: flex; align-items: center; gap: 8px; }
 .page-intro { color: var(--text-secondary); margin-bottom: 20px; font-size: 0.95em; }
@@ -894,7 +893,7 @@ function switchPage(name) {
     var sec = document.getElementById('page-' + name); if (sec) sec.classList.add('active');
     document.querySelectorAll('.nav-tab').forEach(function(t) { t.classList.remove('active'); });
     var tab = pageMap[name]; if (tab) tab.classList.add('active');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo(0, 0);
     clearSearch();
 }
 
@@ -992,7 +991,7 @@ function navigateToResult(el) {
                 if (bar) { bar.innerHTML = '收起 <span class="card-toggle-arrow" style="transform:rotate(180deg)">▼</span>'; }
             }
         });
-    }, 350);
+    }, 150);
 }
 
 function clearSearch() {
