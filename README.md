@@ -1,47 +1,51 @@
-# 饥荒单机版 Wiki — 生存指南（单页）
+# 饥荒单机版 Wiki · 生存指南
 
-这是从仓库中的“饥荒单机版Wiki · 生存指南”静态 HTML 页面提取并整理而成的一页 README，方便作为项目首页或文档索引。
+《Don't Starve（饥荒）》单机玩法的离线静态单页 Wiki，包含角色、道具、生物、生存技巧、天气、地下、配方等速查内容。支持深色/浅色主题、简洁视图模式、全局搜索与可展开条目卡片。
 
-## 说明
-本仓库包含一个离线静态单页 Wiki，面向《Don't Starve（饥荒）》单机玩法，内容包括角色、道具、生物与生存技巧等速查信息。原页面使用纯 HTML/CSS（并内嵌大量 base64 图片），支持浅色/深色主题与简洁视图模式，含可展开条目卡片与搜索面板（事件处理依赖 JS）。
+## 快速开始
 
-## 页面结构（概要）
-- 头部（Header）
-  - 站点标题/Logo、全局搜索、导航标签（角色、道具、生物、生存、天气、地下、配方、FAQ、版本、关于）
-  - 主题与视图切换按钮（light/dark, default/simple）
-- 主体（Main）
-  - page-characters（角色介绍，默认激活）
-  - page-items（道具系统：工具 / 武器 / 护甲）
-  - page-creatures（生物图鉴：被动 / 中立 / 敌对 / BOSS）
-  - 它标签占位（生存、天气、地下、配方、FAQ、版本、关于）
-- 卡片组件
-  - 每个条目为可展开卡片：头像（data URI）、摘要、标签（tag）、详情区（stat-table）
-- 页脚（Footer）
-  - 样式与版权信息占位
+无需构建，直接静态托管即可：
 
-## 使用与部署
-- 直接打开 HTML 文件即可离线浏览（页面为自包含单文件，图片为 base64 内嵌）。
-- 若部署为静态站点（GitHub Pages 等），直接推送该 HTML 即可展示。
-- 若希望减小仓库体积或便于维护，建议将内嵌 base64 图片拆分为单独文件并替换为相对链接。
+```bash
+npx --yes http-server . -p 8766
+# 打开 http://127.0.0.1:8766/index.html
+```
 
-## 已导出数据（本次提交）
-为便于后续处理，我已将页面中的“角色”条目抽取为结构化数据并加入仓库：
-- data/characters.json — 角色数据（JSON）
-- data/characters.csv — 角色数据（CSV）
-- docs/characters.md — 角色的可读 Markdown 表格
+## 技术栈
 
-（道具与生物条目的详细数据在 HTML 中部分条目只包含缩略结构，若需要我可以继续解析并导出更多条目。）
+- **前端**：原生 HTML5 + CSS3 + JavaScript（无框架、单文件自包含，全部逻辑内联在 `index.html`）
+- **图片**：WebP 雪碧图（由 Node.js + [sharp](https://sharp.pixelplumbing.com/) 生成）
+- **部署**：GitHub Pages 纯静态托管
 
-## 注意事项
-- 页面交互（卡片展开、搜索、主题切换）依赖 JS 函数（示例中绑定了 `toggleCard`、`setTheme`、`setMode`、`clearSearch` 等），请确保相应脚本存在并正确加载以还原交互体验。
-- base64 图片虽便于单文件分发，但会显著增加文件体积，影响克隆/下载速度。
-- 若需国际化或结构化数据，建议把页面内容抽取为 JSON/CSV/Markdown 源数据，便于搜索与自动生成。
+## 目录结构
 
-## 建议的后续操作（可选）
-- 将图片导出为文件并替换 data URI，减小主 HTML 大小。
-- 抽取道具与生物为结构化数据（data/items.csv, data/creatures.csv）。
-- 补全或确认 JS 脚本以恢复完整交互功能。
+```
+├── index.html                  # 站点唯一入口（结构 + 内联 CSS/JS）
+├── assets/                     # 生成产物：8 张板块雪碧图 + sprites.css + 站点图标
+├── images/                     # 原始素材：116 张 WebP（img-001 ~ img-116）
+├── data/characters.json        # 角色结构化数据
+├── tools/generate-sprite.js    # 雪碧图生成流水线
+└── ARCHITECTURE.md             # ★ 项目架构与技术栈详细文档
+```
+
+## 修改素材后重新生成
+
+```bash
+npm install                      # 首次安装 sharp
+node tools/generate-sprite.js    # 重新生成 assets/sprite-*.webp 与 sprites.css
+```
+
+## 部署到 GitHub Pages
+
+推送到 `main` 分支即可（仓库为纯静态站点，无需任何配置），等待数分钟刷新生效。
+
+## 性能亮点
+
+- 素材预缩放后合成雪碧图：生物板块 6 MB → 340 KB（PNG 时代）
+- WebP 输出：全部雪碧图共 **约 517 KB**
+- 后台预加载全部板块：点击任意板块即时显示，无加载过程
+- 板块切换即时滚动 + 短动画，无延迟感
 
 ---
-来源文件：`index.html`
-[webpage](index.html)
+
+详细架构说明见 [ARCHITECTURE.md](ARCHITECTURE.md)。
