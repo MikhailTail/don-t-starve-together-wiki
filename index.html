@@ -841,6 +841,32 @@ body {
 </footer>
 
 <script>
+// ========== 板块雪碧图后台预加载 ==========
+// 背景图只有元素可见（display 非 none）时才会被浏览器下载，因此切换
+// 板块时现场下载会产生可见的加载过程。页面加载完成后利用空闲时间把
+// 全部板块的雪碧图预取进缓存，之后点击任意板块即可瞬时显示。
+(function preloadSheets() {
+    function collect() {
+        var urls = {};
+        document.querySelectorAll('.sprite').forEach(function(el) {
+            var bg = getComputedStyle(el).backgroundImage;
+            var m = bg && bg !== 'none' ? bg.match(/url\(([^)]+)\)/) : null;
+            if (m) urls[m[1].replace(/["']/g, '')] = true;
+        });
+        return Object.keys(urls);
+    }
+    function preload() {
+        collect().forEach(function(u) {
+            if (u.indexOf('data:') === 0) return;
+            var im = new Image();
+            im.src = u;
+        });
+    }
+    function schedule() { setTimeout(preload, 600); }
+    if (document.readyState === 'complete') schedule();
+    else window.addEventListener('load', schedule);
+})();
+
 // ========== 图片加载优化 ==========
 (function initImages() {
     document.querySelectorAll('img[loading="lazy"]').forEach(function(img) {

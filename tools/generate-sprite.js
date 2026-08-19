@@ -1,6 +1,6 @@
 // tools/generate-sprite.js
 // Splits the site images into per-section sprite sheets:
-//   assets/sprite-<group>.png  (one PNG per page section)
+//   assets/sprite-<group>.webp (one WebP per page section)
 //   assets/sprites.css          (slice rules pointing to the right sheet)
 //   assets/sprite-map.json      (slice -> sheet + position)
 //
@@ -230,10 +230,10 @@ function extractSpriteUsages(html) {
         create: { width: SW, height: SH, channels: 4, background: { r: 0, g: 0, b: 0, alpha: 0 } },
       })
         .composite(composite)
-        .png({ compressionLevel: 9 })
-        .toFile(path.join(OUT_ASSETS_DIR, `sprite-${group}.png`));
-      const kb = Math.round(fs.statSync(path.join(OUT_ASSETS_DIR, `sprite-${group}.png`)).size / 1024);
-      console.log(`sprite-${group}.png  ${SW}x${SH}  ${kb} KB`);
+        .webp({ quality: 90, alphaQuality: 100 })
+        .toFile(path.join(OUT_ASSETS_DIR, `sprite-${group}.webp`));
+      const kb = Math.round(fs.statSync(path.join(OUT_ASSETS_DIR, `sprite-${group}.webp`)).size / 1024);
+      console.log(`sprite-${group}.webp  ${SW}x${SH}  ${kb} KB`);
     }
 
     // 6. Write sprites.css. Slice rule formula for a sheet (SW,SH):
@@ -245,7 +245,7 @@ function extractSpriteUsages(html) {
       const bx = (s * SW) / info.width;
       const by = (s * SH) / info.height;
       const py = (s * info.top) / info.height;
-      return `.${base}.${token} { background-image: url("sprite-${info.group}.png"); background-size: ${round(bx)}px ${round(by)}px; background-position: 0 ${round(-py)}px; }`;
+      return `.${base}.${token} { background-image: url("sprite-${info.group}.webp"); background-size: ${round(bx)}px ${round(by)}px; background-position: 0 ${round(-py)}px; }`;
     };
 
     const css = [];
@@ -277,11 +277,17 @@ function extractSpriteUsages(html) {
     fs.writeFileSync(SPRITES_CSS, css.join('\n') + '\n', 'utf8');
     fs.writeFileSync(SPRITE_MAP, JSON.stringify(groupMap, null, 2), 'utf8');
 
-    // 7. Remove the old monolithic sheet (if present).
+    // 7. Remove the old monolithic sheet and any legacy PNG sheets.
     const oldSheet = path.join(OUT_ASSETS_DIR, 'sprite.png');
     if (fs.existsSync(oldSheet)) {
       fs.unlinkSync(oldSheet);
       console.log('Removed old assets/sprite.png');
+    }
+    for (const f of fs.readdirSync(OUT_ASSETS_DIR)) {
+      if (/^sprite-.*\.png$/.test(f)) {
+        fs.unlinkSync(path.join(OUT_ASSETS_DIR, f));
+        console.log(`Removed legacy ${f}`);
+      }
     }
 
     const linkTag = '<link rel="stylesheet" href="assets/sprites.css">';
@@ -294,7 +300,7 @@ function extractSpriteUsages(html) {
       console.log('Injected sprites.css link.');
     }
 
-    console.log('Done. Generated assets/sprites.css + assets/sprite-<group>.png');
+    console.log('Done. Generated assets/sprites.css + assets/sprite-<group>.webp');
   } catch (err) {
     console.error('Error:', err);
     process.exit(1);
