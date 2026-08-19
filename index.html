@@ -284,8 +284,6 @@ body {
     .game-img.season { width: 48px; height: 48px; }
     .search-wrap { min-width: 120px; }
 }
-@keyframes searchFlash { 0%, 100% { box-shadow: 0 0 0 2px transparent; } 15%, 70% { box-shadow: 0 0 0 3px var(--accent); } }
-.card.search-flash { animation: searchFlash 1.8s ease 2; }
 </style>
 <link rel="stylesheet" href="assets/sprites.css">
 </head>
@@ -332,7 +330,121 @@ body {
     <h2 class="section-title">角色介绍</h2>
     <p class="page-intro">饥荒单机版共有多个可选角色，每位角色拥有独特的特性和能力。<b>点击卡片</b>查看详细属性。</p>
     <div class="item-grid" id="data-characters">
-        <!-- 角色卡片由页面脚本根据 data/characters.json 动态渲染 -->
+
+<div class="card expandable" onclick="toggleCard(this)">
+<div class="card-title"><span class="card-title-left"><span class="sprite sprite-img-002 game-img portrait loaded" role="img"></span>Wilson（威尔逊）</span><span class="card-expand-icon">▼</span></div>
+<div class="card-summary">一位彬彬有礼的绅士科学家。拥有标志性的浓密胡须可抵御寒冷，无特殊缺点。<span class="tag tag-success">新手推荐</span><span class="tag">平衡型</span></div>
+<div class="card-detail"><div class="table-wrap"><table class="stat-table"><tbody><tr><th>生命值</th><td>150</td><th>理智值</th><td>200</td><th>饥饿值</th><td>150</td></tr></tbody></table></div><p><strong>特殊能力：</strong>会长出胡须，胡须可提供保暖效果（最长胡子135秒保暖），剃须获得胡须材料。</p><p><strong>解锁条件：</strong>初始角色，无需解锁。</p></div>
+<div class="card-toggle-bar">点击展开 <span class="card-toggle-arrow">▼</span></div></div>
+
+<div class="card expandable" onclick="toggleCard(this)">
+<div class="card-title"><span class="card-title-left"><span class="sprite sprite-img-003 game-img portrait loaded" role="img"></span>Willow（薇洛）</span><span class="card-expand-icon">▼</span></div>
+<div class="card-summary">一位痴迷火焰的女孩。自带打火机，对火免疫，在火源附近可恢复理智值。<span class="tag tag-warning">注意防火</span><span class="tag">火焰系</span></div>
+<div class="card-detail"><div class="table-wrap"><table class="stat-table"><tbody><tr><th>生命值</th><td>150</td><th>理智值</th><td>120</td><th>饥饿值</th><td>150</td></tr></tbody></table></div><p><strong>特殊能力：</strong>随身携带打火机，免疫火焰伤害，靠近火源恢复理智。理智值过低时会自动纵火。</p><p><strong>解锁条件：</strong>存活8天（160经验）</p></div>
+<div class="card-toggle-bar">点击展开 <span class="card-toggle-arrow">▼</span></div></div>
+
+<div class="card expandable" onclick="toggleCard(this)">
+<div class="card-title"><span class="card-title-left"><span class="sprite sprite-img-004 game-img portrait loaded" role="img"></span>Wolfgang（沃尔夫冈）</span><span class="card-expand-icon">▼</span></div>
+<div class="card-summary">一位强壮的男子。饥饿值影响体型和攻击力，饱食时攻击翻倍。<span class="tag tag-info">战力最强</span><span class="tag">大胃王</span></div>
+<div class="card-detail"><div class="table-wrap"><table class="stat-table"><tbody><tr><th>生命值</th><td>150-300</td><th>理智值</th><td>200</td><th>饥饿值</th><td>300</td></tr></tbody></table></div><p><strong>特殊能力：</strong>饱食时体型变大，攻击力×2，生命上限翻倍。饥饿时体型缩小，攻击力降至×0.75。</p><p><strong>解锁条件：</strong>存活16天（320经验）</p></div>
+<div class="card-toggle-bar">点击展开 <span class="card-toggle-arrow">▼</span></div></div>
+
+<div class="card expandable" onclick="toggleCard(this)">
+<div class="card-title"><span class="card-title-left"><span class="sprite sprite-img-005 game-img portrait loaded" role="img"></span>Wendy（温蒂）</span><span class="card-expand-icon">▼</span></div>
+<div class="card-summary">思念亡姐的忧郁少女。可召唤幽灵姐姐Abigail协助战斗。<span class="tag tag-info">召唤系</span></div>
+<div class="card-detail"><div class="table-wrap"><table class="stat-table"><tbody><tr><th>生命值</th><td>150</td><th>理智值</th><td>200</td><th>饥饿值</th><td>150</td></tr></tbody></table></div><p><strong>特殊能力：</strong>召唤幽灵Abigail（600HP, 范围伤害40）。温蒂自身攻击力0.75倍。夜晚理智消耗减少25%。</p><p><strong>解锁条件：</strong>存活32天（640经验）</p></div>
+<div class="card-toggle-bar">点击展开 <span class="card-toggle-arrow">▼</span></div></div>
+
+<div class="card expandable" onclick="toggleCard(this)">
+<div class="card-title"><span class="card-title-left"><span class="sprite sprite-img-006 game-img portrait loaded" role="img"></span>WX-78</span><span class="card-expand-icon">▼</span></div>
+<div class="card-summary">一台没有感情的机器人。吃齿轮升级属性，雷击获得过载强化。<span class="tag tag-info">成长型</span><span class="tag tag-warning">怕雨</span></div>
+<div class="card-detail"><div class="table-wrap"><table class="stat-table"><tbody><tr><th>生命值</th><td>100-400</td><th>理智值</th><td>100-300</td><th>饥饿值</th><td>100-200</td></tr></tbody></table></div><p><strong>特殊能力：</strong>吃齿轮升级三项属性（最多15级），被雷击中进入过载状态。雨水会造成伤害。</p><p><strong>解锁条件：</strong>存活48天（960经验）</p></div>
+<div class="card-toggle-bar">点击展开 <span class="card-toggle-arrow">▼</span></div></div>
+
+<div class="card expandable" onclick="toggleCard(this)">
+<div class="card-title"><span class="card-title-left"><span class="sprite sprite-img-007 game-img portrait loaded" role="img"></span>Wickerbottom（薇克巴顿）</span><span class="card-expand-icon">▼</span></div>
+<div class="card-summary">博学的图书馆管理员。自带科技等级，可制作多种魔法书籍。<span class="tag tag-info">魔法系</span><span class="tag">不能睡觉</span></div>
+<div class="card-detail"><div class="table-wrap"><table class="stat-table"><tbody><tr><th>生命值</th><td>150</td><th>理智值</th><td>250</td><th>饥饿值</th><td>150</td></tr></tbody></table></div><p><strong>特殊能力：</strong>无需科学机器即可制作一级科技物品。可制作5种魔法书。不能睡觉恢复理智和生命。</p><p><strong>解锁条件：</strong>存活64天（1280经验）</p></div>
+<div class="card-toggle-bar">点击展开 <span class="card-toggle-arrow">▼</span></div></div>
+
+<div class="card expandable" onclick="toggleCard(this)">
+<div class="card-title"><span class="card-title-left"><span class="sprite sprite-img-008 game-img portrait loaded" role="img"></span>Woodie（伍迪）</span><span class="card-expand-icon">▼</span></div>
+<div class="card-summary">加拿大伐木工，拥有一把会说话的斧头Lucy。砍树过多可变身海狸。<span class="tag">变身系</span><span class="tag tag-success">伐木专家</span></div>
+<div class="card-detail"><div class="table-wrap"><table class="stat-table"><tbody><tr><th>生命值</th><td>150</td><th>理智值</th><td>200</td><th>饥饿值</th><td>150</td></tr></tbody></table></div><p><strong>特殊能力：</strong>拥有无限耐久斧头·露西，砍树更快。变身海狸后有强力啃咬攻击和三围独立。</p><p><strong>解锁条件：</strong>存活80天（1600经验）</p></div>
+<div class="card-toggle-bar">点击展开 <span class="card-toggle-arrow">▼</span></div></div>
+
+<div class="card expandable" onclick="toggleCard(this)">
+<div class="card-title"><span class="card-title-left"><span class="sprite sprite-img-009 game-img portrait loaded" role="img"></span>Wes（韦斯）</span><span class="card-expand-icon">▼</span></div>
+<div class="card-summary">沉默的默剧演员。不能说话，属性全面削弱。<span class="tag tag-danger">高难度</span><span class="tag">纯挑战</span></div>
+<div class="card-detail"><div class="table-wrap"><table class="stat-table"><tbody><tr><th>生命值</th><td>113</td><th>理智值</th><td>150</td><th>饥饿值</th><td>113</td></tr></tbody></table></div><p><strong>特殊能力：</strong>可制作气球，饥饿消耗快1.25倍。不能说话。真正的硬核挑战。</p><p><strong>解锁条件：</strong>冒险模式中找到并解救韦斯。</p></div>
+<div class="card-toggle-bar">点击展开 <span class="card-toggle-arrow">▼</span></div></div>
+
+<div class="card expandable" onclick="toggleCard(this)">
+<div class="card-title"><span class="card-title-left"><span class="sprite sprite-img-010 game-img portrait loaded" role="img"></span>Wigfrid（薇格弗德）<span class="tag tag-warning">ROG</span></span><span class="card-expand-icon">▼</span></div>
+<div class="card-summary">女武神演员。只吃肉食，攻击吸血，自带战斗长矛和头盔。<span class="tag tag-success">战斗专家</span></div>
+<div class="card-detail"><div class="table-wrap"><table class="stat-table"><tbody><tr><th>生命值</th><td>200</td><th>理智值</th><td>120</td><th>饥饿值</th><td>120</td></tr></tbody></table></div><p><strong>特殊能力：</strong>攻击命中恢复生命和理智。自带战斗长矛和头盔。只能吃肉食。</p><p><strong>解锁条件：</strong>存活96天（1920经验）</p></div>
+<div class="card-toggle-bar">点击展开 <span class="card-toggle-arrow">▼</span></div></div>
+
+<div class="card expandable" onclick="toggleCard(this)">
+<div class="card-title"><span class="card-title-left"><span class="sprite sprite-img-011 game-img portrait loaded" role="img"></span>Webber（韦伯）<span class="tag tag-warning">ROG</span></span><span class="card-expand-icon">▼</span></div>
+<div class="card-summary">蜘蛛体内的小男孩。与蜘蛛友好，吃怪物肉不受惩罚。<span class="tag tag-info">蜘蛛之友</span></div>
+<div class="card-detail"><div class="table-wrap"><table class="stat-table"><tbody><tr><th>生命值</th><td>175</td><th>理智值</th><td>100</td><th>饥饿值</th><td>175</td></tr></tbody></table></div><p><strong>特殊能力：</strong>蜘蛛友好不攻击，可喂肉收买蜘蛛。吃怪物肉无惩罚。猪人会主动攻击。</p><p><strong>解锁条件：</strong>找到韦伯的头骨埋入坟墓。</p></div>
+<div class="card-toggle-bar">点击展开 <span class="card-toggle-arrow">▼</span></div></div>
+
+<div class="card expandable" onclick="toggleCard(this)">
+<div class="card-title"><span class="card-title-left"><span class="sprite sprite-img-012 game-img portrait loaded" role="img"></span>Walani（瓦拉尼）<span class="tag tag-warning">船难</span></span><span class="card-expand-icon">▼</span></div>
+<div class="card-summary">冲浪女孩，自带冲浪板，冲浪时可恢复理智。<span class="tag tag-info">海洋系</span></div>
+<div class="card-detail"><div class="table-wrap"><table class="stat-table"><tbody><tr><th>生命值</th><td>120</td><th>理智值</th><td>200</td><th>饥饿值</th><td>200</td></tr></tbody></table></div><p><strong>特殊能力：</strong>自带冲浪板，饥饿消耗略快但冲浪恢复理智。更适合海洋环境。</p></div>
+<div class="card-toggle-bar">点击展开 <span class="card-toggle-arrow">▼</span></div></div>
+<div class="card expandable" onclick="toggleCard(this)">
+<div class="card-title"><span class="card-title-left"><span class="sprite sprite-img-013 game-img portrait loaded" role="img"></span>Maxwell（麦斯威尔）</span><span class="card-expand-icon">▼</span></div>
+<div class="card-summary">前暗影之王，仪表堂堂的魔术师。自带暗影装备，理智值高速自动恢复。<span class="tag tag-info">暗影系</span><span class="tag tag-info">高难度</span></div>
+<div class="card-detail"><div class="table-wrap"><table class="stat-table"><tbody><tr><th>生命值</th><td>75</td><th>理智值</th><td>200</td><th>饥饿值</th><td>150</td></tr></tbody></table></div><p><strong>特殊能力：</strong>理智值自然恢复（+20/分钟），自带暗影剑、暗影甲、紫宝石、4噩梦燃料。初始暗影分身协助战斗。生命值最低的角色，需依靠装备生存。</p><p><strong>解锁方式：通关冒险模式第五章</strong></p></div>
+<div class="card-toggle-bar">点击展开 <span class="card-toggle-arrow">▼</span></div></div>
+
+<div class="card expandable" onclick="toggleCard(this)">
+<div class="card-title"><span class="card-title-left"><span class="sprite sprite-img-014 game-img portrait loaded" role="img"></span>Warly（沃利）<span class="tag tag-warning">船难</span></span><span class="card-expand-icon">▼</span></div>
+<div class="card-summary">美食家厨师，自带便携烹饪锅，可制作多种特殊料理。<span class="tag tag-info">烹饪专家</span><span class="tag tag-info">挑食</span></div>
+<div class="card-detail"><div class="table-wrap"><table class="stat-table"><tbody><tr><th>生命值</th><td>150</td><th>理智值</th><td>200</td><th>饥饿值</th><td>250</td></tr></tbody></table></div><p><strong>特殊能力：</strong>自带便携烹饪锅，可制作独有料理（蜜汁火腿、怪物肉干等）。饥饿值消耗+33%。拒绝连续吃同样食物，需不断变换食谱。</p><p><strong>DLC：船难（Shipwrecked）</strong></p></div>
+<div class="card-toggle-bar">点击展开 <span class="card-toggle-arrow">▼</span></div></div>
+
+<div class="card expandable" onclick="toggleCard(this)">
+<div class="card-title"><span class="card-title-left"><span class="sprite sprite-img-015 game-img portrait loaded" role="img"></span>Wilbur（威尔伯）<span class="tag tag-warning">船难</span></span><span class="card-expand-icon">▼</span></div>
+<div class="card-summary">猿猴之王，跑动后可四肢着地加速奔跑。投掷粪便造成可观伤害，与猴子部落友好。<span class="tag tag-info">敏捷型</span><span class="tag tag-info">猿猴之王</span></div>
+<div class="card-detail"><div class="table-wrap"><table class="stat-table"><tbody><tr><th>生命值</th><td>125</td><th>理智值</th><td>150</td><th>饥饿值</th><td>175</td></tr></tbody></table></div><p><strong>特殊能力：</strong>跑动3秒后四肢奔跑，速度+33%。可投掷粪便（伤害10）。与原住民猴子中立，不主动攻击。移动速度较快。</p><p><strong>DLC：船难（Shipwrecked）</strong></p></div>
+<div class="card-toggle-bar">点击展开 <span class="card-toggle-arrow">▼</span></div></div>
+
+<div class="card expandable" onclick="toggleCard(this)">
+<div class="card-title"><span class="card-title-left"><span class="sprite sprite-img-016 game-img portrait loaded" role="img"></span>Woodlegs（木腿船长）<span class="tag tag-warning">船难</span></span><span class="card-expand-icon">▼</span></div>
+<div class="card-summary">独腿海盗船长，自带幸运帽和海盗船。可挖掘藏宝地点找到丰厚财宝。<span class="tag tag-info">寻宝型</span><span class="tag tag-info">陆地惩罚</span></div>
+<div class="card-detail"><div class="table-wrap"><table class="stat-table"><tbody><tr><th>生命值</th><td>150</td><th>理智值</th><td>120</td><th>饥饿值</th><td>150</td></tr></tbody></table></div><p><strong>特殊能力：</strong>自带幸运帽和海上腿海盗船。可使用铲子挖掘藏宝地点找到宝藏。在陆地上理智值持续下降（-4.8/分钟）。</p><p><strong>DLC：船难（Shipwrecked）</strong></p></div>
+<div class="card-toggle-bar">点击展开 <span class="card-toggle-arrow">▼</span></div></div>
+
+<div class="card expandable" onclick="toggleCard(this)">
+<div class="card-title"><span class="card-title-left"><span class="sprite sprite-img-017 game-img portrait loaded" role="img"></span>Wheeler（薇勒）<span class="tag tag-warning">猪镇</span></span><span class="card-expand-icon">▼</span></div>
+<div class="card-summary">勇敢的飞行员，自带气喇叭枪和导航仪，拥有闪避冲刺能力，移动速度快。<span class="tag tag-info">远程攻击</span><span class="tag tag-info">轻装出行</span></div>
+<div class="card-detail"><div class="table-wrap"><table class="stat-table"><tbody><tr><th>生命值</th><td>100</td><th>理智值</th><td>150</td><th>饥饿值</th><td>150</td></tr></tbody></table></div><p><strong>特殊能力：</strong>自带气喇叭枪（远程武器）和导航仪。可闪避冲刺快速移动。移动速度+5%。初始物品栏减少3格（12格）。</p><p><strong>DLC：猪镇（Hamlet）</strong></p></div>
+<div class="card-toggle-bar">点击展开 <span class="card-toggle-arrow">▼</span></div></div>
+
+<div class="card expandable" onclick="toggleCard(this)">
+<div class="card-title"><span class="card-title-left"><span class="sprite sprite-img-018 game-img portrait loaded" role="img"></span>Wagstaff（瓦格斯塔夫）<span class="tag tag-warning">猪镇</span></span><span class="card-expand-icon">▼</span></div>
+<div class="card-summary">发明家科学家，自带护目镜可侦测物体，能制作各种奇妙装置。<span class="tag tag-info">科技型</span><span class="tag tag-info">近视</span></div>
+<div class="card-detail"><div class="table-wrap"><table class="stat-table"><tbody><tr><th>生命值</th><td>150</td><th>理智值</th><td>200</td><th>饥饿值</th><td>150</td></tr></tbody></table></div><p><strong>特殊能力：</strong>自带护目镜（可视范围扩大，可侦测隐藏物体）。可制作独有发明装置（投影仪、电击器等）。不戴护目镜时视野受限（近视效果）。</p><p><strong>DLC：猪镇（Hamlet）</strong></p></div>
+<div class="card-toggle-bar">点击展开 <span class="card-toggle-arrow">▼</span></div></div>
+
+<div class="card expandable" onclick="toggleCard(this)">
+<div class="card-title"><span class="card-title-left"><span class="sprite sprite-img-019 game-img portrait loaded" role="img"></span>Wilba（薇尔芭）<span class="tag tag-warning">猪镇</span></span><span class="card-expand-icon">▼</span></div>
+<div class="card-summary">猪人公主，可在猪人商店用金块交易，拥有独特王冠。害怕黑暗和怪物肉。<span class="tag tag-info">富家千金</span><span class="tag tag-info">交易者</span></div>
+<div class="card-detail"><div class="table-wrap"><table class="stat-table"><tbody><tr><th>生命值</th><td>150</td><th>理智值</th><td>100</td><th>饥饿值</th><td>200</td></tr></tbody></table></div><p><strong>特殊能力：</strong>猪人公主，与猪人交易有折扣。吃怪物肉损失理智值。满月可变身为猪人形态增强战斗。初始携带皇家王冠。</p><p><strong>DLC：猪镇（Hamlet）</strong></p></div>
+<div class="card-toggle-bar">点击展开 <span class="card-toggle-arrow">▼</span></div></div>
+
+<div class="card expandable" onclick="toggleCard(this)">
+<div class="card-title"><span class="card-title-left"><span class="sprite sprite-img-020 game-img portrait loaded" role="img"></span>Wormwood（沃姆伍德）<span class="tag tag-warning">猪镇</span></span><span class="card-expand-icon">▼</span></div>
+<div class="card-summary">植物生物，可直接种植种子，花开状态提升移动速度。<span class="tag tag-info">植物系</span><span class="tag tag-info">独特治疗</span></div>
+<div class="card-detail"><div class="table-wrap"><table class="stat-table"><tbody><tr><th>生命值</th><td>150</td><th>理智值</th><td>200</td><th>饥饿值</th><td>150</td></tr></tbody></table></div><p><strong>特殊能力：</strong>可直接种植种子（无需农场）。花开状态：春季和雨后绽放，移动速度+20%，饥饿消耗+50%。不能通过食物恢复生命值，需肥料/粪便/活木恢复。与蜜蜂、萤火虫等生物友善。</p><p><strong>DLC：猪镇（Hamlet）</strong></p></div>
+<div class="card-toggle-bar">点击展开 <span class="card-toggle-arrow">▼</span></div></div>
+
+
     </div>
 </section>
 
@@ -777,345 +889,9 @@ function toggleFaq(el) {
     if (!was) { item.classList.add('open'); item.querySelector('.faq-answer').classList.add('open'); }
 }
 
-// ========== 角色数据驱动渲染 ==========
-var CHARACTER_DATA = [
-  {
-    "id": 1,
-    "name": "Wilson",
-    "name_cn": "威尔逊",
-    "portrait": "sprite-img-002",
-    "description": "一位彬彬有礼的绅士科学家。拥有标志性的浓密胡须可抵御寒冷，无特殊缺点。",
-    "tags": [
-      { "text": "新手推荐", "style": "success" },
-      { "text": "平衡型", "style": "" }
-    ],
-    "stats": { "hp": 150, "sanity": 200, "hunger": 150 },
-    "ability": "会长出胡须，胡须可提供保暖效果（最长胡子135秒保暖），剃须获得胡须材料。",
-    "unlock": "初始角色，无需解锁。",
-    "dlc": null
-  },
-  {
-    "id": 2,
-    "name": "Willow",
-    "name_cn": "薇洛",
-    "portrait": "sprite-img-003",
-    "description": "一位痴迷火焰的女孩。自带打火机，对火免疫，在火源附近可恢复理智值。",
-    "tags": [
-      { "text": "注意防火", "style": "warning" },
-      { "text": "火焰系", "style": "" }
-    ],
-    "stats": { "hp": 150, "sanity": 120, "hunger": 150 },
-    "ability": "随身携带打火机，免疫火焰伤害，靠近火源恢复理智。理智值过低时会自动纵火。",
-    "unlock": "存活8天（160经验）",
-    "dlc": null
-  },
-  {
-    "id": 3,
-    "name": "Wolfgang",
-    "name_cn": "沃尔夫冈",
-    "portrait": "sprite-img-004",
-    "description": "一位强壮的男子。饥饿值影响体型和攻击力，饱食时攻击翻倍。",
-    "tags": [
-      { "text": "战力最强", "style": "info" },
-      { "text": "大胃王", "style": "" }
-    ],
-    "stats": { "hp": "150-300", "sanity": 200, "hunger": 300 },
-    "ability": "饱食时体型变大，攻击力×2，生命上限翻倍。饥饿时体型缩小，攻击力降至×0.75。",
-    "unlock": "存活16天（320经验）",
-    "dlc": null
-  },
-  {
-    "id": 4,
-    "name": "Wendy",
-    "name_cn": "温蒂",
-    "portrait": "sprite-img-005",
-    "description": "思念亡姐的忧郁少女。可召唤幽灵姐姐Abigail协助战斗。",
-    "tags": [
-      { "text": "召唤系", "style": "info" }
-    ],
-    "stats": { "hp": 150, "sanity": 200, "hunger": 150 },
-    "ability": "召唤幽灵Abigail（600HP, 范围伤害40）。温蒂自身攻击力0.75倍。夜晚理智消耗减少25%。",
-    "unlock": "存活32天（640经验）",
-    "dlc": null
-  },
-  {
-    "id": 5,
-    "name": "WX-78",
-    "name_cn": "WX-78",
-    "portrait": "sprite-img-006",
-    "description": "一台没有感情的机器人。吃齿轮升级属性，雷击获得过载强化。",
-    "tags": [
-      { "text": "成长型", "style": "info" },
-      { "text": "怕雨", "style": "warning" }
-    ],
-    "stats": { "hp": "100-400", "sanity": "100-300", "hunger": "100-200" },
-    "ability": "吃齿轮升级三项属性（最多15级），被雷击中进入过载状态。雨水会造成伤害。",
-    "unlock": "存活48天（960经验）",
-    "dlc": null
-  },
-  {
-    "id": 6,
-    "name": "Wickerbottom",
-    "name_cn": "薇克巴顿",
-    "portrait": "sprite-img-007",
-    "description": "博学的图书馆管理员。自带科技等级，可制作多种魔法书籍。",
-    "tags": [
-      { "text": "魔法系", "style": "info" },
-      { "text": "不能睡觉", "style": "" }
-    ],
-    "stats": { "hp": 150, "sanity": 250, "hunger": 150 },
-    "ability": "无需科学机器即可制作一级科技物品。可制作5种魔法书。不能睡觉恢复理智和生命。",
-    "unlock": "存活64天（1280经验）",
-    "dlc": null
-  },
-  {
-    "id": 7,
-    "name": "Woodie",
-    "name_cn": "伍迪",
-    "portrait": "sprite-img-008",
-    "description": "加拿大伐木工，拥有一把会说话的斧头Lucy。砍树过多可变身海狸。",
-    "tags": [
-      { "text": "变身系", "style": "" },
-      { "text": "伐木专家", "style": "success" }
-    ],
-    "stats": { "hp": 150, "sanity": 200, "hunger": 150 },
-    "ability": "拥有无限耐久斧头·露西，砍树更快。变身海狸后有强力啃咬攻击和三围独立。",
-    "unlock": "存活80天（1600经验）",
-    "dlc": null
-  },
-  {
-    "id": 8,
-    "name": "Wes",
-    "name_cn": "韦斯",
-    "portrait": "sprite-img-009",
-    "description": "沉默的默剧演员。不能说话，属性全面削弱。",
-    "tags": [
-      { "text": "高难度", "style": "danger" },
-      { "text": "纯挑战", "style": "" }
-    ],
-    "stats": { "hp": 113, "sanity": 150, "hunger": 113 },
-    "ability": "可制作气球，饥饿消耗快1.25倍。不能说话。真正的硬核挑战。",
-    "unlock": "冒险模式中找到并解救韦斯。",
-    "dlc": null
-  },
-  {
-    "id": 9,
-    "name": "Wigfrid",
-    "name_cn": "薇格弗德",
-    "portrait": "sprite-img-010",
-    "description": "女武神演员。只吃肉食，攻击吸血，自带战斗长矛和头盔。",
-    "tags": [
-      { "text": "战斗专家", "style": "success" }
-    ],
-    "stats": { "hp": 200, "sanity": 120, "hunger": 120 },
-    "ability": "攻击命中恢复生命和理智。自带战斗长矛和头盔。只能吃肉食。",
-    "unlock": "存活96天（1920经验）",
-    "dlc": "ROG"
-  },
-  {
-    "id": 10,
-    "name": "Webber",
-    "name_cn": "韦伯",
-    "portrait": "sprite-img-011",
-    "description": "蜘蛛体内的小男孩。与蜘蛛友好，吃怪物肉不受惩罚。",
-    "tags": [
-      { "text": "蜘蛛之友", "style": "info" }
-    ],
-    "stats": { "hp": 175, "sanity": 100, "hunger": 175 },
-    "ability": "蜘蛛友好不攻击，可喂肉收买蜘蛛。吃怪物肉无惩罚。猪人会主动攻击。",
-    "unlock": "找到韦伯的头骨埋入坟墓。",
-    "dlc": "ROG"
-  },
-  {
-    "id": 11,
-    "name": "Walani",
-    "name_cn": "瓦拉尼",
-    "portrait": "sprite-img-012",
-    "description": "冲浪女孩，自带冲浪板，冲浪时可恢复理智。",
-    "tags": [
-      { "text": "海洋系", "style": "info" }
-    ],
-    "stats": { "hp": 120, "sanity": 200, "hunger": 200 },
-    "ability": "自带冲浪板，饥饿消耗略快但冲浪恢复理智。更适合海洋环境。",
-    "unlock": null,
-    "dlc": "船难"
-  },
-  {
-    "id": 12,
-    "name": "Maxwell",
-    "name_cn": "麦斯威尔",
-    "portrait": "sprite-img-013",
-    "description": "前暗影之王，仪表堂堂的魔术师。自带暗影装备，理智值高速自动恢复。",
-    "tags": [
-      { "text": "暗影系", "style": "info" },
-      { "text": "高难度", "style": "info" }
-    ],
-    "stats": { "hp": 75, "sanity": 200, "hunger": 150 },
-    "ability": "理智值自然恢复（+20/分钟），自带暗影剑、暗影甲、紫宝石、4噩梦燃料。初始暗影分身协助战斗。生命值最低的角色，需依靠装备生存。",
-    "unlock": "通关冒险模式第五章",
-    "dlc": null
-  },
-  {
-    "id": 13,
-    "name": "Warly",
-    "name_cn": "沃利",
-    "portrait": "sprite-img-014",
-    "description": "美食家厨师，自带便携烹饪锅，可制作多种特殊料理。",
-    "tags": [
-      { "text": "烹饪专家", "style": "info" },
-      { "text": "挑食", "style": "info" }
-    ],
-    "stats": { "hp": 150, "sanity": 200, "hunger": 250 },
-    "ability": "自带便携烹饪锅，可制作独有料理（蜜汁火腿、怪物肉干等）。饥饿值消耗+33%。拒绝连续吃同样食物，需不断变换食谱。",
-    "unlock": null,
-    "dlc": "船难"
-  },
-  {
-    "id": 14,
-    "name": "Wilbur",
-    "name_cn": "威尔伯",
-    "portrait": "sprite-img-015",
-    "description": "猿猴之王，跑动后可四肢着地加速奔跑。投掷粪便造成可观伤害，与猴子部落友好。",
-    "tags": [
-      { "text": "敏捷型", "style": "info" },
-      { "text": "猿猴之王", "style": "info" }
-    ],
-    "stats": { "hp": 125, "sanity": 150, "hunger": 175 },
-    "ability": "跑动3秒后四肢奔跑，速度+33%。可投掷粪便（伤害10）。与原住民猴子中立，不主动攻击。移动速度较快。",
-    "unlock": null,
-    "dlc": "船难"
-  },
-  {
-    "id": 15,
-    "name": "Woodlegs",
-    "name_cn": "木腿船长",
-    "portrait": "sprite-img-016",
-    "description": "独腿海盗船长，自带幸运帽和海盗船。可挖掘藏宝地点找到丰厚财宝。",
-    "tags": [
-      { "text": "寻宝型", "style": "info" },
-      { "text": "陆地惩罚", "style": "info" }
-    ],
-    "stats": { "hp": 150, "sanity": 120, "hunger": 150 },
-    "ability": "自带幸运帽和海上腿海盗船。可使用铲子挖掘藏宝地点找到宝藏。在陆地上理智值持续下降（-4.8/分钟）。",
-    "unlock": null,
-    "dlc": "船难"
-  },
-  {
-    "id": 16,
-    "name": "Wheeler",
-    "name_cn": "薇勒",
-    "portrait": "sprite-img-017",
-    "description": "勇敢的飞行员，自带气喇叭枪和导航仪，拥有闪避冲刺能力，移动速度快。",
-    "tags": [
-      { "text": "远程攻击", "style": "info" },
-      { "text": "轻装出行", "style": "info" }
-    ],
-    "stats": { "hp": 100, "sanity": 150, "hunger": 150 },
-    "ability": "自带气喇叭枪（远程武器）和导航仪。可闪避冲刺快速移动。移动速度+5%。初始物品栏减少3格（12格）。",
-    "unlock": null,
-    "dlc": "猪镇"
-  },
-  {
-    "id": 17,
-    "name": "Wagstaff",
-    "name_cn": "瓦格斯塔夫",
-    "portrait": "sprite-img-018",
-    "description": "发明家科学家，自带护目镜可侦测物体，能制作各种奇妙装置。",
-    "tags": [
-      { "text": "科技型", "style": "info" },
-      { "text": "近视", "style": "info" }
-    ],
-    "stats": { "hp": 150, "sanity": 200, "hunger": 150 },
-    "ability": "自带护目镜（可视范围扩大，可侦测隐藏物体）。可制作独有发明装置（投影仪、电击器等）。不戴护目镜时视野受限（近视效果）。",
-    "unlock": null,
-    "dlc": "猪镇"
-  },
-  {
-    "id": 18,
-    "name": "Wilba",
-    "name_cn": "薇尔芭",
-    "portrait": "sprite-img-019",
-    "description": "猪人公主，可在猪人商店用金块交易，拥有独特王冠。害怕黑暗和怪物肉。",
-    "tags": [
-      { "text": "富家千金", "style": "info" },
-      { "text": "交易者", "style": "info" }
-    ],
-    "stats": { "hp": 150, "sanity": 100, "hunger": 200 },
-    "ability": "猪人公主，与猪人交易有折扣。吃怪物肉损失理智值。满月可变身为猪人形态增强战斗。初始携带皇家王冠。",
-    "unlock": null,
-    "dlc": "猪镇"
-  },
-  {
-    "id": 19,
-    "name": "Wormwood",
-    "name_cn": "沃姆伍德",
-    "portrait": "sprite-img-020",
-    "description": "植物生物，可直接种植种子，花开状态提升移动速度。",
-    "tags": [
-      { "text": "植物系", "style": "info" },
-      { "text": "独特治疗", "style": "info" }
-    ],
-    "stats": { "hp": 150, "sanity": 200, "hunger": 150 },
-    "ability": "可直接种植种子（无需农场）。花开状态：春季和雨后绽放，移动速度+20%，饥饿消耗+50%。不能通过食物恢复生命值，需肥料/粪便/活木恢复。与蜜蜂、萤火虫等生物友善。",
-    "unlock": null,
-    "dlc": "猪镇"
-  }
-];
-
-var DLC_FULL = { 'ROG': '巨人的统治（ROG）', '船难': '船难（Shipwrecked）', '猪镇': '猪镇（Hamlet）' };
-
-function loadCharacterData(cb) {
-    if (window.fetch) {
-        fetch('data/characters.json')
-            .then(function(r) { if (!r.ok) { throw new Error('HTTP ' + r.status); } return r.json(); })
-            .then(cb)
-            .catch(function() { cb(CHARACTER_DATA); });
-    } else {
-        cb(CHARACTER_DATA);
-    }
-}
-
-function tagHtml(t) {
-    if (!t) return '';
-    if (typeof t === 'string') { t = { text: t, style: '' }; }
-    return '<span class="tag' + (t.style ? ' tag-' + t.style : '') + '">' + escapeHtml(t.text) + '</span>';
-}
-
-function statsRowHtml(s) {
-    return '<tr><th>生命值</th><td>' + escapeHtml(String(s.hp)) + '</td><th>理智值</th><td>' + escapeHtml(String(s.sanity)) + '</td><th>饥饿值</th><td>' + escapeHtml(String(s.hunger)) + '</td></tr>';
-}
-
-function characterCardHtml(c) {
-    var tags = (c.tags || []).map(tagHtml).join('');
-    var detail = '<div class="table-wrap"><table class="stat-table"><tbody>' + statsRowHtml(c.stats) + '</tbody></table></div>';
-    if (c.ability) { detail += '<p><strong>特殊能力：</strong>' + escapeHtml(c.ability) + '</p>'; }
-    if (c.unlock) { detail += '<p><strong>解锁条件：</strong>' + escapeHtml(c.unlock) + '</p>'; }
-    else if (c.dlc) { detail += '<p><strong>DLC：</strong>' + escapeHtml(DLC_FULL[c.dlc] || c.dlc) + '</p>'; }
-    var title = '<span class="card-title-left"><span class="sprite ' + c.portrait + ' game-img portrait loaded" role="img"></span>' + escapeHtml(c.name) + (c.name_cn && c.name_cn !== c.name ? '（' + escapeHtml(c.name_cn) + '）' : '') + (c.dlc ? '<span class="tag tag-warning">' + escapeHtml(c.dlc) + '</span>' : '') + '</span><span class="card-expand-icon">▼</span>';
-    var searchParts = [c.name, c.name_cn, c.description];
-    (c.tags || []).forEach(function(t) { searchParts.push(typeof t === 'string' ? t : t.text); });
-    searchParts.push(c.ability, c.unlock, c.dlc);
-    var dataSearch = escapeHtml(searchParts.filter(Boolean).join(' '));
-    return '<div class="card expandable" data-char-id="' + c.id + '" data-search="' + dataSearch + '" onclick="toggleCard(this)">' +
-        '<div class="card-title">' + title + '</div>' +
-        '<div class="card-summary">' + escapeHtml(c.description) + tags + '</div>' +
-        '<div class="card-detail">' + detail + '</div>' +
-        '<div class="card-toggle-bar">点击展开 <span class="card-toggle-arrow">▼</span></div></div>';
-}
-
-function renderCharacters(list) {
-    var box = document.getElementById('data-characters');
-    if (!box || !list) return;
-    box.innerHTML = list.map(characterCardHtml).join('');
-    buildSearchIndex();
-}
-
-loadCharacterData(renderCharacters);
-
 // ========== 全局搜索导航 ==========
 var searchData = [];
-function buildSearchIndex() {
-    searchData = [];
+(function buildSearchIndex() {
     var sections = document.querySelectorAll('.page-section');
     sections.forEach(function(section) {
         var sectionName = section.id.replace('page-', '');
@@ -1128,19 +904,16 @@ function buildSearchIndex() {
             var titleText = title ? title.textContent.replace(/\s+/g, ' ').trim() : '';
             var summary = card.querySelector('.card-summary');
             var summaryText = summary ? summary.textContent.replace(/\s+/g, ' ').trim() : '';
-            var custom = card.getAttribute('data-search');
             searchData.push({
                 section: sectionName,
                 sectionLabel: sectionLabel,
                 title: titleText,
                 snippet: summaryText,
-                searchText: custom ? (titleText + ' ' + custom + ' ' + summaryText).toLowerCase() : null,
                 card: card
             });
         });
     });
-}
-buildSearchIndex();
+})();
 
 var searchFocusedIdx = -1;
 
@@ -1153,8 +926,9 @@ function doGlobalSearch(val) {
     var lower = q.toLowerCase();
     var results = [];
     searchData.forEach(function(d) {
-        var hay = d.searchText || (d.title + ' ' + d.snippet + ' ' + d.sectionLabel).toLowerCase();
-        if (hay.indexOf(lower) > -1) { results.push(d); }
+        if (d.title.toLowerCase().indexOf(lower)>-1 || d.snippet.toLowerCase().indexOf(lower)>-1 || d.sectionLabel.toLowerCase().indexOf(lower)>-1) {
+            results.push(d);
+        }
     });
     if (results.length === 0) {
         panel.innerHTML = '<div class="search-no-result">未找到与「' + escapeHtml(q) + '」相关的内容</div>';
@@ -1187,10 +961,6 @@ function navigateToResult(el) {
                 card.classList.add('expanded');
                 var bar = card.querySelector('.card-toggle-bar');
                 if (bar) { bar.innerHTML = '收起 <span class="card-toggle-arrow" style="transform:rotate(180deg)">▼</span>'; }
-                card.classList.remove('search-flash');
-                void card.offsetWidth;
-                card.classList.add('search-flash');
-                setTimeout(function() { card.classList.remove('search-flash'); }, 3600);
             }
         });
     }, 350);
