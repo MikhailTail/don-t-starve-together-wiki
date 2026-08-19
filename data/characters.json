@@ -1,154 +1,283 @@
 [
   {
     "id": 1,
-    "display_name": null,
+    "name": "Wilson",
+    "name_cn": "威尔逊",
+    "portrait": "sprite-img-002",
     "description": "一位彬彬有礼的绅士科学家。拥有标志性的浓密胡须可抵御寒冷，无特殊缺点。",
-    "tags": ["新手推荐"],
-    "stats": {"hp": 150, "sanity": 200, "hunger": 150},
-    "portrait": null
+    "tags": [
+      { "text": "新手推荐", "style": "success" },
+      { "text": "平衡型", "style": "" }
+    ],
+    "stats": { "hp": 150, "sanity": 200, "hunger": 150 },
+    "ability": "会长出胡须，胡须可提供保暖效果（最长胡子135秒保暖），剃须获得胡须材料。",
+    "unlock": "初始角色，无需解锁。",
+    "dlc": null
   },
   {
     "id": 2,
-    "display_name": null,
+    "name": "Willow",
+    "name_cn": "薇洛",
+    "portrait": "sprite-img-003",
     "description": "一位痴迷火焰的女孩。自带打火机，对火免疫，在火源附近可恢复理智值。",
-    "tags": ["注意防火"],
-    "stats": {"hp": 150, "sanity": 120, "hunger": 150},
-    "portrait": null
+    "tags": [
+      { "text": "注意防火", "style": "warning" },
+      { "text": "火焰系", "style": "" }
+    ],
+    "stats": { "hp": 150, "sanity": 120, "hunger": 150 },
+    "ability": "随身携带打火机，免疫火焰伤害，靠近火源恢复理智。理智值过低时会自动纵火。",
+    "unlock": "存活8天（160经验）",
+    "dlc": null
   },
   {
     "id": 3,
-    "display_name": null,
+    "name": "Wolfgang",
+    "name_cn": "沃尔夫冈",
+    "portrait": "sprite-img-004",
     "description": "一位强壮的男子。饥饿值影响体型和攻击力，饱食时攻击翻倍。",
-    "tags": ["战力最强","大胃王"],
-    "stats": {"hp": "150-300", "sanity": 200, "hunger": 300},
-    "portrait": null
+    "tags": [
+      { "text": "战力最强", "style": "info" },
+      { "text": "大胃王", "style": "" }
+    ],
+    "stats": { "hp": "150-300", "sanity": 200, "hunger": 300 },
+    "ability": "饱食时体型变大，攻击力×2，生命上限翻倍。饥饿时体型缩小，攻击力降至×0.75。",
+    "unlock": "存活16天（320经验）",
+    "dlc": null
   },
   {
     "id": 4,
-    "display_name": null,
+    "name": "Wendy",
+    "name_cn": "温蒂",
+    "portrait": "sprite-img-005",
     "description": "思念亡姐的忧郁少女。可召唤幽灵姐姐Abigail协助战斗。",
-    "tags": ["召唤系"],
-    "stats": {"hp": 150, "sanity": 200, "hunger": 150},
-    "portrait": null
+    "tags": [
+      { "text": "召唤系", "style": "info" }
+    ],
+    "stats": { "hp": 150, "sanity": 200, "hunger": 150 },
+    "ability": "召唤幽灵Abigail（600HP, 范围伤害40）。温蒂自身攻击力0.75倍。夜晚理智消耗减少25%。",
+    "unlock": "存活32天（640经验）",
+    "dlc": null
   },
   {
     "id": 5,
-    "display_name": null,
+    "name": "WX-78",
+    "name_cn": "WX-78",
+    "portrait": "sprite-img-006",
     "description": "一台没有感情的机器人。吃齿轮升级属性，雷击获得过载强化。",
-    "tags": ["成长型","怕雨"],
-    "stats": {"hp": "100-400", "sanity": "100-300", "hunger": "100-200"},
-    "portrait": null
+    "tags": [
+      { "text": "成长型", "style": "info" },
+      { "text": "怕雨", "style": "warning" }
+    ],
+    "stats": { "hp": "100-400", "sanity": "100-300", "hunger": "100-200" },
+    "ability": "吃齿轮升级三项属性（最多15级），被雷击中进入过载状态。雨水会造成伤害。",
+    "unlock": "存活48天（960经验）",
+    "dlc": null
   },
   {
     "id": 6,
-    "display_name": null,
+    "name": "Wickerbottom",
+    "name_cn": "薇克巴顿",
+    "portrait": "sprite-img-007",
     "description": "博学的图书馆管理员。自带科技等级，可制作多种魔法书籍。",
-    "tags": ["魔法系","不能睡觉"],
-    "stats": {"hp": 150, "sanity": 250, "hunger": 150},
-    "portrait": null
+    "tags": [
+      { "text": "魔法系", "style": "info" },
+      { "text": "不能睡觉", "style": "" }
+    ],
+    "stats": { "hp": 150, "sanity": 250, "hunger": 150 },
+    "ability": "无需科学机器即可制作一级科技物品。可制作5种魔法书。不能睡觉恢复理智和生命。",
+    "unlock": "存活64天（1280经验）",
+    "dlc": null
   },
   {
     "id": 7,
-    "display_name": null,
+    "name": "Woodie",
+    "name_cn": "伍迪",
+    "portrait": "sprite-img-008",
     "description": "加拿大伐木工，拥有一把会说话的斧头Lucy。砍树过多可变身海狸。",
-    "tags": ["变身系","伐木专家"],
-    "stats": {"hp": 150, "sanity": 200, "hunger": 150},
-    "portrait": null
+    "tags": [
+      { "text": "变身系", "style": "" },
+      { "text": "伐木专家", "style": "success" }
+    ],
+    "stats": { "hp": 150, "sanity": 200, "hunger": 150 },
+    "ability": "拥有无限耐久斧头·露西，砍树更快。变身海狸后有强力啃咬攻击和三围独立。",
+    "unlock": "存活80天（1600经验）",
+    "dlc": null
   },
   {
     "id": 8,
-    "display_name": null,
+    "name": "Wes",
+    "name_cn": "韦斯",
+    "portrait": "sprite-img-009",
     "description": "沉默的默剧演员。不能说话，属性全面削弱。",
-    "tags": ["高难度","纯挑战"],
-    "stats": {"hp": 113, "sanity": 150, "hunger": 113},
-    "portrait": null
+    "tags": [
+      { "text": "高难度", "style": "danger" },
+      { "text": "纯挑战", "style": "" }
+    ],
+    "stats": { "hp": 113, "sanity": 150, "hunger": 113 },
+    "ability": "可制作气球，饥饿消耗快1.25倍。不能说话。真正的硬核挑战。",
+    "unlock": "冒险模式中找到并解救韦斯。",
+    "dlc": null
   },
   {
     "id": 9,
-    "display_name": null,
+    "name": "Wigfrid",
+    "name_cn": "薇格弗德",
+    "portrait": "sprite-img-010",
     "description": "女武神演员。只吃肉食，攻击吸血，自带战斗长矛和头盔。",
-    "tags": ["战斗专家"],
-    "stats": {"hp": 200, "sanity": 120, "hunger": 120},
-    "portrait": null
+    "tags": [
+      { "text": "战斗专家", "style": "success" }
+    ],
+    "stats": { "hp": 200, "sanity": 120, "hunger": 120 },
+    "ability": "攻击命中恢复生命和理智。自带战斗长矛和头盔。只能吃肉食。",
+    "unlock": "存活96天（1920经验）",
+    "dlc": "ROG"
   },
   {
     "id": 10,
-    "display_name": null,
+    "name": "Webber",
+    "name_cn": "韦伯",
+    "portrait": "sprite-img-011",
     "description": "蜘蛛体内的小男孩。与蜘蛛友好，吃怪物肉不受惩罚。",
-    "tags": ["蜘蛛之友"],
-    "stats": {"hp": 175, "sanity": 100, "hunger": 175},
-    "portrait": null
+    "tags": [
+      { "text": "蜘蛛之友", "style": "info" }
+    ],
+    "stats": { "hp": 175, "sanity": 100, "hunger": 175 },
+    "ability": "蜘蛛友好不攻击，可喂肉收买蜘蛛。吃怪物肉无惩罚。猪人会主动攻击。",
+    "unlock": "找到韦伯的头骨埋入坟墓。",
+    "dlc": "ROG"
   },
   {
     "id": 11,
-    "display_name": null,
+    "name": "Walani",
+    "name_cn": "瓦拉尼",
+    "portrait": "sprite-img-012",
     "description": "冲浪女孩，自带冲浪板，冲浪时可恢复理智。",
-    "tags": ["海洋系"],
-    "stats": {"hp": 120, "sanity": 200, "hunger": 200},
-    "portrait": null
+    "tags": [
+      { "text": "海洋系", "style": "info" }
+    ],
+    "stats": { "hp": 120, "sanity": 200, "hunger": 200 },
+    "ability": "自带冲浪板，饥饿消耗略快但冲浪恢复理智。更适合海洋环境。",
+    "unlock": null,
+    "dlc": "船难"
   },
   {
     "id": 12,
-    "display_name": null,
+    "name": "Maxwell",
+    "name_cn": "麦斯威尔",
+    "portrait": "sprite-img-013",
     "description": "前暗影之王，仪表堂堂的魔术师。自带暗影装备，理智值高速自动恢复。",
-    "tags": ["暗影系","高难度"],
-    "stats": {"hp": 75, "sanity": 200, "hunger": 150},
-    "portrait": null
+    "tags": [
+      { "text": "暗影系", "style": "info" },
+      { "text": "高难度", "style": "info" }
+    ],
+    "stats": { "hp": 75, "sanity": 200, "hunger": 150 },
+    "ability": "理智值自然恢复（+20/分钟），自带暗影剑、暗影甲、紫宝石、4噩梦燃料。初始暗影分身协助战斗。生命值最低的角色，需依靠装备生存。",
+    "unlock": "通关冒险模式第五章",
+    "dlc": null
   },
   {
     "id": 13,
-    "display_name": null,
+    "name": "Warly",
+    "name_cn": "沃利",
+    "portrait": "sprite-img-014",
     "description": "美食家厨师，自带便携烹饪锅，可制作多种特殊料理。",
-    "tags": ["烹饪专家","挑食"],
-    "stats": {"hp": 150, "sanity": 200, "hunger": 250},
-    "portrait": null
+    "tags": [
+      { "text": "烹饪专家", "style": "info" },
+      { "text": "挑食", "style": "info" }
+    ],
+    "stats": { "hp": 150, "sanity": 200, "hunger": 250 },
+    "ability": "自带便携烹饪锅，可制作独有料理（蜜汁火腿、怪物肉干等）。饥饿值消耗+33%。拒绝连续吃同样食物，需不断变换食谱。",
+    "unlock": null,
+    "dlc": "船难"
   },
   {
     "id": 14,
-    "display_name": null,
+    "name": "Wilbur",
+    "name_cn": "威尔伯",
+    "portrait": "sprite-img-015",
     "description": "猿猴之王，跑动后可四肢着地加速奔跑。投掷粪便造成可观伤害，与猴子部落友好。",
-    "tags": ["敏捷型"],
-    "stats": {"hp": 125, "sanity": 150, "hunger": 175},
-    "portrait": null
+    "tags": [
+      { "text": "敏捷型", "style": "info" },
+      { "text": "猿猴之王", "style": "info" }
+    ],
+    "stats": { "hp": 125, "sanity": 150, "hunger": 175 },
+    "ability": "跑动3秒后四肢奔跑，速度+33%。可投掷粪便（伤害10）。与原住民猴子中立，不主动攻击。移动速度较快。",
+    "unlock": null,
+    "dlc": "船难"
   },
   {
     "id": 15,
-    "display_name": null,
+    "name": "Woodlegs",
+    "name_cn": "木腿船长",
+    "portrait": "sprite-img-016",
     "description": "独腿海盗船长，自带幸运帽和海盗船。可挖掘藏宝地点找到丰厚财宝。",
-    "tags": ["寻宝型"],
-    "stats": {"hp": 150, "sanity": 120, "hunger": 150},
-    "portrait": null
+    "tags": [
+      { "text": "寻宝型", "style": "info" },
+      { "text": "陆地惩罚", "style": "info" }
+    ],
+    "stats": { "hp": 150, "sanity": 120, "hunger": 150 },
+    "ability": "自带幸运帽和海上腿海盗船。可使用铲子挖掘藏宝地点找到宝藏。在陆地上理智值持续下降（-4.8/分钟）。",
+    "unlock": null,
+    "dlc": "船难"
   },
   {
     "id": 16,
-    "display_name": null,
+    "name": "Wheeler",
+    "name_cn": "薇勒",
+    "portrait": "sprite-img-017",
     "description": "勇敢的飞行员，自带气喇叭枪和导航仪，拥有闪避冲刺能力，移动速度快。",
-    "tags": ["远程攻击"],
-    "stats": {"hp": 100, "sanity": 150, "hunger": 150},
-    "portrait": null
+    "tags": [
+      { "text": "远程攻击", "style": "info" },
+      { "text": "轻装出行", "style": "info" }
+    ],
+    "stats": { "hp": 100, "sanity": 150, "hunger": 150 },
+    "ability": "自带气喇叭枪（远程武器）和导航仪。可闪避冲刺快速移动。移动速度+5%。初始物品栏减少3格（12格）。",
+    "unlock": null,
+    "dlc": "猪镇"
   },
   {
     "id": 17,
-    "display_name": null,
+    "name": "Wagstaff",
+    "name_cn": "瓦格斯塔夫",
+    "portrait": "sprite-img-018",
     "description": "发明家科学家，自带护目镜可侦测物体，能制作各种奇妙装置。",
-    "tags": ["科技型","近视"],
-    "stats": {"hp": 150, "sanity": 200, "hunger": 150},
-    "portrait": null
+    "tags": [
+      { "text": "科技型", "style": "info" },
+      { "text": "近视", "style": "info" }
+    ],
+    "stats": { "hp": 150, "sanity": 200, "hunger": 150 },
+    "ability": "自带护目镜（可视范围扩大，可侦测隐藏物体）。可制作独有发明装置（投影仪、电击器等）。不戴护目镜时视野受限（近视效果）。",
+    "unlock": null,
+    "dlc": "猪镇"
   },
   {
     "id": 18,
-    "display_name": null,
+    "name": "Wilba",
+    "name_cn": "薇尔芭",
+    "portrait": "sprite-img-019",
     "description": "猪人公主，可在猪人商店用金块交易，拥有独特王冠。害怕黑暗和怪物肉。",
-    "tags": ["富家千金"],
-    "stats": {"hp": 150, "sanity": 100, "hunger": 200},
-    "portrait": null
+    "tags": [
+      { "text": "富家千金", "style": "info" },
+      { "text": "交易者", "style": "info" }
+    ],
+    "stats": { "hp": 150, "sanity": 100, "hunger": 200 },
+    "ability": "猪人公主，与猪人交易有折扣。吃怪物肉损失理智值。满月可变身为猪人形态增强战斗。初始携带皇家王冠。",
+    "unlock": null,
+    "dlc": "猪镇"
   },
   {
     "id": 19,
-    "display_name": null,
+    "name": "Wormwood",
+    "name_cn": "沃姆伍德",
+    "portrait": "sprite-img-020",
     "description": "植物生物，可直接种植种子，花开状态提升移动速度。",
-    "tags": ["植物系","独特治疗"],
-    "stats": {"hp": 150, "sanity": 200, "hunger": 150},
-    "portrait": null
+    "tags": [
+      { "text": "植物系", "style": "info" },
+      { "text": "独特治疗", "style": "info" }
+    ],
+    "stats": { "hp": 150, "sanity": 200, "hunger": 150 },
+    "ability": "可直接种植种子（无需农场）。花开状态：春季和雨后绽放，移动速度+20%，饥饿消耗+50%。不能通过食物恢复生命值，需肥料/粪便/活木恢复。与蜜蜂、萤火虫等生物友善。",
+    "unlock": null,
+    "dlc": "猪镇"
   }
 ]
