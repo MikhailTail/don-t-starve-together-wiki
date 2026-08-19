@@ -10,22 +10,22 @@
     "group": "shared",
     "left": 0,
     "top": 90,
-    "width": 64,
-    "height": 64
+    "width": 90,
+    "height": 90
   },
   "img-065.webp": {
     "group": "shared",
     "left": 0,
-    "top": 154,
-    "width": 64,
-    "height": 64
+    "top": 180,
+    "width": 90,
+    "height": 90
   },
   "img-067.webp": {
     "group": "shared",
     "left": 0,
-    "top": 218,
-    "width": 64,
-    "height": 64
+    "top": 270,
+    "width": 90,
+    "height": 90
   },
   "img-002.webp": {
     "group": "characters",
@@ -276,316 +276,316 @@
     "group": "creatures",
     "left": 0,
     "top": 0,
-    "width": 64,
-    "height": 64
+    "width": 144,
+    "height": 144
   },
   "img-038.webp": {
     "group": "creatures",
     "left": 0,
-    "top": 64,
-    "width": 64,
-    "height": 64
+    "top": 144,
+    "width": 144,
+    "height": 144
   },
   "img-039.webp": {
     "group": "creatures",
     "left": 0,
-    "top": 128,
-    "width": 64,
-    "height": 64
+    "top": 288,
+    "width": 144,
+    "height": 144
   },
   "img-040.webp": {
     "group": "creatures",
     "left": 0,
-    "top": 192,
-    "width": 64,
-    "height": 64
+    "top": 432,
+    "width": 144,
+    "height": 144
   },
   "img-041.webp": {
     "group": "creatures",
     "left": 0,
-    "top": 256,
-    "width": 283,
-    "height": 354
+    "top": 576,
+    "width": 115,
+    "height": 144
   },
   "img-042.webp": {
     "group": "creatures",
     "left": 0,
-    "top": 610,
-    "width": 796,
-    "height": 637
+    "top": 720,
+    "width": 180,
+    "height": 144
   },
   "img-043.webp": {
     "group": "creatures",
     "left": 0,
-    "top": 1247,
-    "width": 469,
-    "height": 491
+    "top": 864,
+    "width": 138,
+    "height": 144
   },
   "img-044.webp": {
     "group": "creatures",
     "left": 0,
-    "top": 1738,
-    "width": 234,
-    "height": 214
+    "top": 1008,
+    "width": 157,
+    "height": 144
   },
   "img-045.webp": {
     "group": "creatures",
     "left": 0,
-    "top": 1952,
-    "width": 64,
-    "height": 64
+    "top": 1152,
+    "width": 144,
+    "height": 144
   },
   "img-046.webp": {
     "group": "creatures",
     "left": 0,
-    "top": 2016,
-    "width": 430,
-    "height": 450
+    "top": 1296,
+    "width": 138,
+    "height": 144
   },
   "img-047.webp": {
     "group": "creatures",
     "left": 0,
-    "top": 2466,
-    "width": 374,
-    "height": 600
+    "top": 1440,
+    "width": 90,
+    "height": 144
   },
   "img-048.webp": {
     "group": "creatures",
     "left": 0,
-    "top": 3066,
-    "width": 278,
-    "height": 469
+    "top": 1584,
+    "width": 85,
+    "height": 144
   },
   "img-049.webp": {
     "group": "creatures",
     "left": 0,
-    "top": 3535,
-    "width": 829,
-    "height": 1040
+    "top": 1728,
+    "width": 115,
+    "height": 144
   },
   "img-050.webp": {
     "group": "creatures",
     "left": 0,
-    "top": 4575,
-    "width": 474,
-    "height": 700
+    "top": 1872,
+    "width": 98,
+    "height": 144
   },
   "img-051.webp": {
     "group": "creatures",
     "left": 0,
-    "top": 5275,
-    "width": 1300,
-    "height": 1330
+    "top": 2016,
+    "width": 141,
+    "height": 144
   },
   "img-052.webp": {
     "group": "creatures",
     "left": 0,
-    "top": 6605,
-    "width": 1504,
-    "height": 1784
+    "top": 2160,
+    "width": 121,
+    "height": 144
   },
   "img-053.webp": {
     "group": "survival",
     "left": 0,
     "top": 0,
-    "width": 136,
-    "height": 136
+    "width": 179,
+    "height": 179
   },
   "img-054.webp": {
     "group": "survival",
     "left": 0,
-    "top": 136,
-    "width": 136,
-    "height": 136
+    "top": 179,
+    "width": 179,
+    "height": 179
   },
   "img-055.webp": {
     "group": "survival",
     "left": 0,
-    "top": 272,
-    "width": 136,
-    "height": 136
+    "top": 358,
+    "width": 179,
+    "height": 179
   },
   "img-056.webp": {
     "group": "survival",
     "left": 0,
-    "top": 408,
+    "top": 537,
     "width": 158,
     "height": 179
   },
   "img-057.webp": {
     "group": "survival",
     "left": 0,
-    "top": 587,
-    "width": 64,
-    "height": 64
+    "top": 716,
+    "width": 179,
+    "height": 179
   },
   "img-058.webp": {
     "group": "survival",
     "left": 0,
-    "top": 651,
-    "width": 64,
-    "height": 64
+    "top": 895,
+    "width": 179,
+    "height": 179
   },
   "img-059.webp": {
     "group": "survival",
     "left": 0,
-    "top": 715,
-    "width": 64,
-    "height": 64
+    "top": 1074,
+    "width": 179,
+    "height": 179
   },
   "img-060.webp": {
     "group": "survival",
     "left": 0,
-    "top": 779,
-    "width": 64,
-    "height": 64
+    "top": 1253,
+    "width": 179,
+    "height": 179
   },
   "img-061.webp": {
     "group": "weather",
     "left": 0,
     "top": 0,
-    "width": 322,
-    "height": 356
+    "width": 130,
+    "height": 144
   },
   "img-062.webp": {
     "group": "weather",
     "left": 0,
-    "top": 356,
-    "width": 64,
-    "height": 64
+    "top": 144,
+    "width": 144,
+    "height": 144
   },
   "img-064.webp": {
     "group": "weather",
     "left": 0,
-    "top": 420,
-    "width": 220,
-    "height": 180
+    "top": 288,
+    "width": 176,
+    "height": 144
   },
   "img-066.webp": {
     "group": "weather",
     "left": 0,
-    "top": 600,
-    "width": 240,
-    "height": 220
+    "top": 432,
+    "width": 157,
+    "height": 144
   },
   "img-068.webp": {
     "group": "caves",
     "left": 0,
     "top": 0,
-    "width": 249,
-    "height": 404
+    "width": 118,
+    "height": 192
   },
   "img-069.webp": {
     "group": "caves",
     "left": 0,
-    "top": 404,
-    "width": 64,
-    "height": 64
+    "top": 192,
+    "width": 192,
+    "height": 192
   },
   "img-070.webp": {
     "group": "caves",
     "left": 0,
-    "top": 468,
-    "width": 64,
-    "height": 64
+    "top": 384,
+    "width": 192,
+    "height": 192
   },
   "img-071.webp": {
     "group": "caves",
     "left": 0,
-    "top": 532,
-    "width": 434,
-    "height": 340
+    "top": 576,
+    "width": 245,
+    "height": 192
   },
   "img-072.webp": {
     "group": "caves",
     "left": 0,
-    "top": 872,
-    "width": 330,
-    "height": 452
+    "top": 768,
+    "width": 140,
+    "height": 192
   },
   "img-073.webp": {
     "group": "caves",
     "left": 0,
-    "top": 1324,
-    "width": 204,
-    "height": 226
+    "top": 960,
+    "width": 173,
+    "height": 192
   },
   "img-074.webp": {
     "group": "caves",
     "left": 0,
-    "top": 1550,
-    "width": 390,
-    "height": 358
+    "top": 1152,
+    "width": 209,
+    "height": 192
   },
   "img-075.webp": {
     "group": "caves",
     "left": 0,
-    "top": 1908,
-    "width": 562,
-    "height": 612
+    "top": 1344,
+    "width": 176,
+    "height": 192
   },
   "img-076.webp": {
     "group": "caves",
     "left": 0,
-    "top": 2520,
-    "width": 335,
-    "height": 327
+    "top": 1536,
+    "width": 197,
+    "height": 192
   },
   "img-077.webp": {
     "group": "caves",
     "left": 0,
-    "top": 2847,
-    "width": 216,
-    "height": 216
+    "top": 1728,
+    "width": 192,
+    "height": 192
   },
   "img-078.webp": {
     "group": "caves",
     "left": 0,
-    "top": 3063,
-    "width": 64,
-    "height": 64
+    "top": 1920,
+    "width": 192,
+    "height": 192
   },
   "img-079.webp": {
     "group": "caves",
     "left": 0,
-    "top": 3127,
-    "width": 64,
-    "height": 64
+    "top": 2112,
+    "width": 192,
+    "height": 192
   },
   "img-080.webp": {
     "group": "caves",
     "left": 0,
-    "top": 3191,
-    "width": 64,
-    "height": 64
+    "top": 2304,
+    "width": 192,
+    "height": 192
   },
   "img-081.webp": {
     "group": "caves",
     "left": 0,
-    "top": 3255,
-    "width": 64,
-    "height": 64
+    "top": 2496,
+    "width": 192,
+    "height": 192
   },
   "img-082.webp": {
     "group": "caves",
     "left": 0,
-    "top": 3319,
-    "width": 64,
-    "height": 64
+    "top": 2688,
+    "width": 192,
+    "height": 192
   },
   "img-083.webp": {
     "group": "caves",
     "left": 0,
-    "top": 3383,
-    "width": 64,
-    "height": 64
+    "top": 2880,
+    "width": 192,
+    "height": 192
   },
   "img-084.webp": {
     "group": "caves",
     "left": 0,
-    "top": 3447,
-    "width": 64,
-    "height": 64
+    "top": 3072,
+    "width": 192,
+    "height": 192
   },
   "img-085.webp": {
     "group": "crafting",

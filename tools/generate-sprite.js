@@ -37,6 +37,12 @@ const SIZE_TOKENS = {
 };
 const MOBILE_MEDIA = '@media (max-width: 480px)';
 
+// Icons are rendered at 24-64px, so the source artwork is downscaled to
+// (largest display size * DPR) before compositing. Feeding the sheets the
+// original artwork is wasteful: PNG is lossless and 1300x1300+ BOSS art
+// decompressed from webp bloats the sheet to multiple MB.
+const DPR = 3;
+
 function getSizeToken(classes) {
   const tokens = String(classes || '').split(/\s+/);
   for (const name of Object.keys(SIZE_TOKENS)) {
@@ -183,22 +189,40 @@ function extractSpriteUsages(html) {
     }
 
     // 5. Pack each group into its own sheet + build css.
+    // Every slice in one sheet must share the same height for the CSS
+    // slice-position formula to hold. The shared height H is chosen as:
+    //   - display-driven target (largest token * DPR) when the group contains
+    //     large artwork that must be downscaled (creatures, caves)
+    //   - the tallest source image otherwise, so small-icon groups
+    //     (items, crafting, characters) are never upscaled.
     const sheetSize = {}; // group -> { SW, SH }
     const groupMap = {};  // filename -> { group, left, top, width, height }
     for (const [group, files] of Object.entries(GROUPS)) {
       const present = files.filter((f) => fs.existsSync(path.join(OUT_IMAGES_DIR, f)));
-      const info = present.map((f) => {
-        const m = metas.find((x) => x.filename === f);
-        return m;
-      });
-      const SW = Math.max(...info.map((m) => m.width));
-      const SH = info.reduce((s, m) => s + m.height, 0);
+      const info = present.map((f) => metas.find((x) => x.filename === f)).filter(Boolean);
+      const tokens = [...new Set(info.flatMap((m) => [...(tokenByFile[m.filename] || [])]))];
+      const maxS = tokens.length ? Math.max(...tokens.map((t) => SIZE_TOKENS[t].desktop)) : 48;
+      const targetH = Math.max(maxS * DPR, 24);
+      const maxOrigH = Math.max(...info.map((m) => m.height));
+      const H = maxOrigH > targetH ? targetH : maxOrigH; // only downscale, never upscale
+      const planned = info.map((m) => ({ ...m, targetH: H }));
+
+      const prepared = [];
+      for (const m of planned) {
+        const buf = await sharp(m.path)
+          .resize({ height: m.targetH })
+          .png({ compressionLevel: 9 })
+          .toBuffer({ resolveWithObject: true });
+        prepared.push({ filename: m.filename, data: buf.data, width: buf.info.width, height: buf.info.height });
+      }
+      const SW = Math.max(...prepared.map((m) => m.width));
+      const SH = prepared.reduce((s, m) => s + m.height, 0);
       sheetSize[group] = { SW, SH };
 
       let y = 0;
       const composite = [];
-      for (const m of info) {
-        composite.push({ input: m.path, top: y, left: 0 });
+      for (const m of prepared) {
+        composite.push({ input: m.data, top: y, left: 0 });
         groupMap[m.filename] = { group, left: 0, top: y, width: m.width, height: m.height };
         y += m.height;
       }
@@ -206,7 +230,7 @@ function extractSpriteUsages(html) {
         create: { width: SW, height: SH, channels: 4, background: { r: 0, g: 0, b: 0, alpha: 0 } },
       })
         .composite(composite)
-        .png()
+        .png({ compressionLevel: 9 })
         .toFile(path.join(OUT_ASSETS_DIR, `sprite-${group}.png`));
       const kb = Math.round(fs.statSync(path.join(OUT_ASSETS_DIR, `sprite-${group}.png`)).size / 1024);
       console.log(`sprite-${group}.png  ${SW}x${SH}  ${kb} KB`);
