@@ -280,10 +280,11 @@ body {
 }
 
 /* ========== Sprite helper classes (placeholders)
-   The generator (tools/generate-sprite.js) will create 'assets/sprite.png' and 'assets/sprites.css'.
-   Each image will get a class like .sprite-id-1 with background-position/size set in assets/sprites.css
+   The generator (tools/generate-sprite.js) creates 'assets/sprite-<group>.png' and 'assets/sprites.css'.
+   Each image gets a class like .sprite-img-002 with background-position/size set in assets/sprites.css.
+   Note: assets/sprites.css is linked from index.html and provides the background-image.
 */
-.sprite { display:inline-block; background-image: url('assets/sprite.png'); background-repeat: no-repeat; background-size: auto; }
+.sprite { display:inline-block; background-repeat: no-repeat; }
 .sprite--portrait { width:48px; height:48px; }
 .sprite--item { width:40px; height:40px; }
 .sprite--creature { width:48px; height:48px; }
